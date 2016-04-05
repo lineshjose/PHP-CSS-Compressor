@@ -6,7 +6,7 @@
 	Author: Linesh Jose
 	Url: https://lineshjose.com
 	Email: lineshjose@gmail.com
-	Donate:  http://bit.ly/donate-linesh
+	Donate:  https://lineshjose.com/make-a-donation/
 	github: https://github.com/lineshjose
 	Demo: https://lineshjose.com/blog/how-to-create-a-simple-css-compressor-using-php/
 	Copyright: Copyright (c) 2015 LineshJose.com
