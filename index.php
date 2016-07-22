@@ -2,7 +2,7 @@
 /*
 	Name: PHP CSS Compressor.
 	Description: A simple PHP functions that compress css codes
-	Version : 2.00
+	Version : 3.00
 	Author: Linesh Jose
 	Url: http://linesh.com
 	Donate:  http://linesh.com/make-a-donation/
@@ -19,20 +19,18 @@
 */
 
 // Compress CSS function
-function compress_css($css_codes){		
-	$buffer =strip_tags(trim($css_codes));
-	// Remove comments
-	$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
-	// Remove whitespace
-	$buffer = str_replace(array(': ',' :'), ':', $buffer);
-	$buffer = str_replace(array('; ',' ;'), ';', $buffer);
-	$buffer = str_replace(array('{ ',' {'), '{', $buffer);
-	$buffer = str_replace(array('} ',' }'), '}', $buffer);
-	$buffer = str_replace(array(', ',' ,'), ',', $buffer);
-	$buffer = str_replace(array('. ',' .'), ' .', $buffer);
-	$buffer = str_replace(array('   ', '  '), ' ', $buffer);
-	$buffer = str_replace(array("\r\n", "\r", "\n", "\t"), '', $buffer);
-	echo 	 $buffer;
+function compress_css($css){		
+	$css =strip_tags($css);
+	// Remove comments & whitespace
+	$css = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css);
+	$css = preg_replace('/\s{2,}/', ' ', $css);
+	$css = preg_replace('/[\t\n\r]/', '', $css);
+	$css = str_replace(array(': ',' :'), ':', $css);
+	$css = str_replace(array('; ',' ;'), ';', $css);
+	$css = str_replace(array('{ ',' {'), '{', $css);
+	$css = str_replace(array('} ',' }'), '}', $css);
+	$css = str_replace(array(', ',' ,'), ',', $css);
+	echo trim($css);
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
