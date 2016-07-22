@@ -12,7 +12,7 @@ Donate:  http://linesh.com/make-a-donation/
 
 github: https://github.com/lineshjose
 
-Demo: http://lineshjose.com/blog/how-to-create-a-simple-css-compressor-using-php/
+Demo: http://linesh.com/blog/how-to-create-a-simple-css-compressor-using-php/
 
 Copyright: Copyright (c) 2012 Linesh.com
 
